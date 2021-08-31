@@ -1,0 +1,71 @@
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    " . . formularioDatos . . "
+    "footer footer footer footer footer"; 
+    
+}
+
+.formularioDatos{
+    grid-area: formularioDatos;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+
+form{
+    background: #d4d4d4 ;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #002069;
+}
+
+input{
+    margin-top: 10px;
+    width: 300px;
+    height: 25px;
+}
+
+button{
+    width: 310px;
+    height: 36px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: crimson;
+    color: #fff;
+    font-weight: bold;
+  
+}
+
+
+h2{
+    background: #002069;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+footer{
+    grid-area: footer;
+    margin-top: 10px;
+    background: brown;
+    height: 50px;
+
+}
+
+footer p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+}

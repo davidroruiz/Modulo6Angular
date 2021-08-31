@@ -1,0 +1,37 @@
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "peliculas peliculas peliculas peliculas peliculas"
+    " footer footer footer footer footer " ;
+}
+
+.peliculas{
+    margin-top: 20px;
+    grid-area: peliculas;
+    display: flex;
+    flex-direction: row;
+}
+
+.peliculas img{
+    margin-left: 20px;
+    width: 200px;
+
+}
+
+footer{
+    grid-area: footer;
+    margin-top: 10px;
+    background: brown;
+    height: 50px;
+
+}
+
+footer p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+}
