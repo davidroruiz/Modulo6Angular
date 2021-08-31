@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <main>
+
+        <section class="tabla">
+            <h1>Lista de Datos</h1>
+            <article class="ordenar">
+                <div class="nombre">
+                    <p>Nombre:</p> {{miAutor.nombre}}
+                </div>
+                <div class="apellido">
+                    <p>Apellido: </p>{{miAutor.apellido}}
+                </div>
+                <div class="bibliografica">
+                    <p>Bibliografia: </p>{{miAutor.bibliografia}}
+                </div>
+            </article>
+        </section>
+
+
+        <form class="example-form">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Mejor Usuario</mat-label>
+              <input matInput placeholder="Ex. Pizza" value="{{miAutor.nombre}}" #inputNombre>
+            </mat-form-field>
+          
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Mejor Apellido</mat-label>
+                <input matInput placeholder="Ex. Pizza"  value="{{miAutor.apellido}}" #inputApellido>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Mejor Bibliografia</mat-label>
+                <input matInput placeholder="Ex. Pizza" value="{{miAutor.bibliografia}}" #inputBibliografia>
+              </mat-form-field>
+
+         
+
+              <section class="enviar">
+                <div class="example-button-row">
+                  <div class="example-flex-container">
+                    
+                    <button mat-fab color="warn" aria-label="Example icon button with a home icon"
+                    (click)="saveAutor(inputNombre,inputApellido,inputBibliografia)">
+                    <mat-icon>home</mat-icon>
+
+                    </button>
+                    
+                   
+                  </div>
+                </div>
+              </section>
+          </form>
+          
+
+    </main>
+<footer>
+    <p>@Copyright David Rodriguez Ruiz</p>
+</footer>
+</body>
+
+</html>

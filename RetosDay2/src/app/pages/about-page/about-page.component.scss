@@ -1,0 +1,118 @@
+
+
+     
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    ". tabla tabla tabla ."
+    ". nombre apellido bibliografica ."
+    ". . example-form example-form ." 
+    "footer footer footer footer footer" ;
+}
+
+.tabla{
+    grid-area: tabla;
+    border-radius: 10px;
+    background: #002069;
+}
+.tabla h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: crimson;
+    background: #002069;
+
+    
+
+}
+.ordenar{
+    display: flex;
+    flex-direction: row;
+    width: 111.1%;
+    border-radius: 50px;
+
+
+}
+
+
+
+.ordenar p {
+    font-weight: bold;
+    height: 30px;
+    width: auto;
+    background: cornflowerblue;
+    
+}
+
+
+.nombre{
+    grid-area: nombre;
+    background: grey;
+    width: 30%;
+    color: #fff;
+
+}
+
+.nombre p{
+    color: black;
+
+}
+
+.apellido{
+    grid-area: apellido;
+    background: grey;
+    width: 30%;
+    color: #fff;
+}
+
+
+.apellido p{
+    color: black;
+}
+
+.bibliografica{
+    grid-area: bibliografica;
+    background: grey;
+    width: 30%;
+    color: #fff;
+}
+
+.bibliografica p{
+    color: black;
+}
+.example-form {
+    margin-top: 30px;
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    grid-area: example-form;
+  }
+  
+  .example-full-width {
+      
+    width: 100%;
+  }
+
+  .enviar{
+      display: flex;
+      align-items: center;
+      justify-content: center
+  }
+
+  footer{
+      margin-top: 10px;
+      grid-area: footer;
+      background: crimson;
+      height: 35px;
+  }
+
+  footer p{
+      display: flex;
+      color: #fff;
+      font-weight: bold;
+      justify-content: center;
+      align-items: center;
+  }
+
