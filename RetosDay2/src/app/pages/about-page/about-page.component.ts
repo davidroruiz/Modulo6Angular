@@ -22,10 +22,6 @@ export class AboutPageComponent implements OnInit {
   ngOnInit(): void {
   }
    
-
-  
-
-
   public saveAutor=(
     elementNombre:HTMLInputElement,
     elementApellido:HTMLInputElement,

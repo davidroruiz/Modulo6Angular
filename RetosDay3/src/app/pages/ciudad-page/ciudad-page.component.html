@@ -1,0 +1,55 @@
+<section class="my-10">
+    <h1 class="flex justify-center items-center bg-blue-500 h-20 text-purple-50 font-bold">Lista de Ciudades</h1>
+    
+    <ul class="flex justify-center space-x-96 items-center text-white font-bold bg-yellow-500 h-16">
+  
+      <li>Nombre</li>
+      <li>Pais</li>
+      <li>Codigo</li>
+
+    </ul>
+
+    <ng-container *ngFor="let ciudad of ciudades; let i = index " (click)="clickAll()">
+    <ul id="ciudad{{i}}" class="flex flex-row space-x-96 justify-center"
+              [ngClass]="(i%2!=0)? 'bg-gray-400':'bg-gray-300'">
+        <div class="flex flex-col justify-start ">
+        <li>{{ciudad.nombre}}
+            <article *ngIf="ciudades.length ===0">
+                No hay Ciudades
+            </article></li>
+        </div>
+
+        <div class="flex flex-col justify-center">
+            <li>{{ciudad.pais}}
+                <article *ngIf="ciudades.length === 0">
+                    No hay Paises
+                </article>
+            </div>
+
+            <div class="flex flex-col justify-end">
+            <li>{{ciudad.codigo}}
+                <article *ngIf="ciudades.length === 0">
+                    No hay Codigos
+                </article>
+            </li>
+
+        </div>
+    </ul>
+</ng-container>
+
+
+    <section class="flex flex-col justify-center items-center my-10">
+        <h1 class="my-5 text-red-800 font-bold">Formulario</h1>
+        <input class="w-72" type="number" placeholder="Nombre Comunidad" #nombre />
+        <input class="w-72" type="number" placeholder="Pais" #pais />
+        <input class="w-72" type="number" placeholder="Codigo" #codigo />
+        
+        <button class="my-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" (click)="onCreateDatos(nombre, pais, codigo)">Crear Datos</button>
+      
+      </section>
+      
+
+
+        <section class="juan"></section>>
+  </section>
+
