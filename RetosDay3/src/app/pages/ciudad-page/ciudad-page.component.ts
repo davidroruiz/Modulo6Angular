@@ -9,17 +9,23 @@ import { Clima } from '../../models/clima';
 })
 export class CiudadPageComponent implements OnInit {
 
-  ciudades: Ciudad[] = [
-    { nombre: "Madrid", pais: "España", codigo: "MAD" },
-    { nombre: "Cadiz", pais: "España", codigo: "CAD"},
-    { nombre: "Somo", pais: "España", codigo: "SOM" },
-    { nombre: "Tarifa", pais: "España", codigo: "TAR" },
-    { nombre: "Sidney", pais: "Australia", codigo: "SID"},
-
-
-  ]
-
  
+public data: Ciudad |undefined;
+public ciudades:Ciudad[]
+
+  constructor() {
+    this.ciudades = [
+      { nombre: "Madrid", pais: "España", codigo: "MAD", clima: {temperatura:5, viento:5, precipitaciones: 10} },
+      { nombre: "Cadiz", pais: "España", codigo: "CAD", clima: {temperatura:5, viento:5, precipitaciones: 10} },
+      { nombre: "Somo", pais: "España", codigo: "SOM" , clima: {temperatura:5, viento:5, precipitaciones: 10} },
+      { nombre: "Tarifa", pais: "España", codigo: "TAR" , clima: {temperatura:5, viento:5, precipitaciones: 10} },
+      { nombre: "Sidney", pais: "Australia", codigo: "SID", clima: {temperatura:5, viento:5, precipitaciones: 10} },
+  
+  
+    ]
+
+    
+   }
 
  
   public onCreateDatos=(
@@ -30,17 +36,30 @@ export class CiudadPageComponent implements OnInit {
       const paisElement = pais.value;
       const codigoElement = codigo.value;
       
-      let newCiudad={nombre: nombreElement,pais: paisElement, codigo: codigoElement}
+      let newCiudad={
+        nombre: nombreElement,
+        pais: paisElement, 
+        codigo: codigoElement, 
+        clima: {temperatura:5, viento:5, precipitaciones: 10} }
 
       this.ciudades.push(newCiudad)
       console.log(this.ciudades);
       
     }
 
-    clickAll(){
-      this.ciudades;
+    public datosFila(nombre:string | undefined ,pais:string|undefined ,codigo:string| undefined ,clima:any){
+      this.data =  {
+        nombre: nombre,
+        pais: pais,
+        codigo: codigo,
+        clima: {temperatura:clima.temperatura, viento: clima.viento, precipitaciones: clima.precipitaciones}
+      }
+
     }
-  constructor() { }
+
+
+  
+  
 
   ngOnInit(): void {
   }
