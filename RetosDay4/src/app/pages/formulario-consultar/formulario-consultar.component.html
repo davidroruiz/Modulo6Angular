@@ -1,0 +1,42 @@
+<section class="my-10">
+    <h1 class="flex justify-center items-center bg-purple-500 h-20 text-purple-50 font-bold">Lista de Ciudades</h1>
+    
+  
+</section>
+
+
+<ng-container *ngFor="let ciudad of ciudades" >
+<div>
+    <ul class="flex flex-row space-x-96 justify-center" >
+        <div class="flex flex-col justify-start ">
+        <li>{{ciudad.nombre}}</li>
+          
+        </div>
+
+        <div class="flex flex-col justify-center">
+            <li>{{ciudad.pais}}</li>
+           
+            </div>
+
+            <div class="flex flex-col justify-end">
+                <li>{{ciudad.codigo}}</li>
+        </div>
+    </ul>
+    </div>
+</ng-container>
+
+
+    <section class="flex flex-col justify-center items-center my-10">
+        <h1 class="my-5 text-red-800 font-bold">Formulario</h1>
+        <input class="w-72" type="text" placeholder="Code" #code />
+      
+        <section class="space-x-4 ">
+        <button class="my-5 bg-blue-200 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" (click)="getCiudades(code.value)">Consultar</button>
+        
+    </section>
+
+    
+      </section>
+
+
+      
