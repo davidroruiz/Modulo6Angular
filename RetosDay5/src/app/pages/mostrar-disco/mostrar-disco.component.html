@@ -1,0 +1,87 @@
+
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="d-flex justify-content-center">
+
+            <div class="mb-3">
+        
+                <label for="exampleFormControlInput1" class="form-label"></label>
+                <input type="number" class="form-control" id="mostrarDatos" placeholder="ID" #discoId>
+        
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label"></label>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Discos</h5>
+                            <p class="card-text">
+                            <div *ngFor="let discos of disco">
+                                <div *ngIf="disco!=null">
+                                    Titulo: {{discos.titulo}} <br>
+                                    Interprete: {{discos.interprete}} <br>
+                                    Anyo Nacimiento: {{discos.anyoPublicacion}} <br>
+                                    <hr>
+        
+                                </div>
+        
+                            </div>
+        
+                        </div>
+                        <button class="btn btn-primary" type="button" (click)="mostrarDisco(discoId.value)">Mostrar</button><br>
+                    </div>
+                </div>
+        
+            </div>
+          
+        </div>
+      </div>
+
+      <div class="informaccion col">
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Informacción</h5>
+                  <p class="card-text">En esta seccion podras buscar una ID de un disco determinado o buscar todos los discos.</p>
+                </div></div>
+      </div>
+      
+    </div>
+  </div>
+  
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="https://www.todorock.com/wp-content/uploads/2020/10/ac-dc-power-up-portada.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">AC/DC</h5>
+              <p class="card-text">Malcolm Young y Angus Young idearon el nombre para la banda después de ver escrito «AC/DC» en la parte de abajo de la máquina de coser de su hermana Margaret (AC/DC es la abreviación en inglés de corriente alterna/corriente continua, que indica que un dispositivo eléctrico puede conectarse a la red eléctrica alterna e internamente la convierte en corriente directa o continua).</p>
+            </div>
+          </div>
+    </div>
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/81J4jpxoScL._SX522_.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Iron Maiden</h5>
+              <p class="card-text">La historia de Iron Maiden parte en el año 1971, cuando Steve Harris, inspirado en bandas como Wishbone Ash, Thin Lizzy, UFO, Black Sabbath, Jethro Tull, Genesis, King Crimson, Led Zeppelin, The Who y Deep Purple, entre otras, adquirió un bajo Fender Precision Bass por unas 40 libras esterlinas, y tras dejar atrás la opción de la batería, para la cual no contaba con el espacio suficiente. Inicialmente Harris también tuvo la ilusión de ser jugador de fútbol del West Ham, sin embargo, comenzó a dedicar todos sus esfuerzos a su otra gran pasión, la música. Esto condujo a la formación de una agrupación musical que llamó Gypsy's Kiss en 1972, cuyo primer concierto fue en el mítico local Cart & Horses en Maryland Point, Stratford.</p>
+            </div></div>
+    </div>
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/81ki4ZAih%2BL._SL1200_.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Rob Zombie</h5>
+              <p class="card-text">Rob Zombie nació con el nombre Robert Bartleh Cummings el 12 de enero de 1965 en Haverhill, Massachusetts. Como sus padres trabajaban en una feria, Rob y su hermano Michael crecieron en la carretera, y ambos compartían intereses por la contracultura, las películas clase B, las películas del oeste y los cómics de fantasía. Esto probablemente los ayudó a definir sus gustos musicales. Rob Zombie ha sido por mucho tiempo fanático de Alice Cooper, Judas Priest, Ramones, Black Sabbath y muchos otros. Los estilos de estos músicos han seguido siendo una fuerte influencia para él hasta la actualidad. </p>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+ 
+

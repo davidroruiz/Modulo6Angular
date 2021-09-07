@@ -1,0 +1,19 @@
+#portadaImagen img{
+    height: 650px;
+}
+.nav{
+    background: #002069;
+}
+
+.nav-item a{
+    color: #fff;
+}
+
+.nav-item .active{
+    color: crimson;
+    font-weight: bold;
+}
+
+.card{
+    margin-top: 30px;
+}

@@ -1,0 +1,41 @@
+<div class="d-flex justify-content-center">
+<form>
+    <div class="mb-3">
+      <label class="form-label">ID Disco</label>
+      <input class="form-control" id="exampleInputEmail1"  placeholder="ID" #idDisco>
+    </div>
+    <div class="mb-3">
+        <label  class="form-label">Titulo Disco</label>
+        <input  class="form-control" id="exampleInputEmail1"  placeholder="Titulo" #titulo>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Interprete Disco</label>
+        <input  class="form-control" id="exampleInputEmail1"  placeholder="Interprete" #interprete>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Anyo Publicacion de Disco</label>
+        <input  class="form-control" id="exampleInputEmail1"  placeholder="Anyo Publicacion" #anyoPublicacion>
+      </div>
+   
+    <button type="button" class=" btn btn-primary" (click)="insertarDisco(titulo.value, interprete.value, anyoPublicacion.value)">Insertar</button>
+    <button type="button" class="btn btn-danger" (click)="eliminarDisco(idDisco.value)">Borrar</button>
+    <button type="button" class="btn btn-warning" (click)="actualizarDisco(idDisco.value,titulo.value, interprete.value, anyoPublicacion.value)">Actualizar</button>
+
+  </form>
+</div>
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <img src="https://www.todorock.com/wp-content/uploads/2020/10/ac-dc-power-up-portada.jpg" class="rounded float-start" alt="...">
+    </div>
+      <div class="col">
+        <img src="https://metalbizarre.com/wp-content/uploads/2020/10/iron_maiden_nights_of_the_dead.jpg" class="rounded float-start" alt="...">
+
+      </div>
+      <div class="col">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/71ZfvjA0K%2BL._SL1200_.jpg" class="rounded float-start" alt="...">
+
+      </div>
+    </div>
+  </div>
+
